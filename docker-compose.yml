@@ -10,10 +10,10 @@ services:
       - ./certs:/etc/nginx/certs:ro
     networks:
       - frontend_net
-      - orchestration_net
+      - public_net
 
 networks:
-  frontend_net:
+  public_net:
     external: true
-  orchestration_net:
+  frontend_net:
     external: true
